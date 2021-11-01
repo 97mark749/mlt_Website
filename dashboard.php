@@ -31,28 +31,28 @@
                             </a>
                         </div>
                         <div class="collapse" id="collapsed-user">
-                                <ul class="nav">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <span class="sidebar-mini">MP</span>
-                                            <span class="sidebar-normal">My Profile</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <span class="sidebar-mini">EP</span>
-                                            <span class="sidebar-normal">Edit Profile</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <span class="sidebar-mini">S</span>
-                                            <span class="sidebar-normal">Settings</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item"></li>
-                                </ul>
-                            </div>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <span class="sidebar-mini">MP</span>
+                                        <span class="sidebar-normal">My Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <span class="sidebar-mini">EP</span>
+                                        <span class="sidebar-normal">Edit Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <span class="sidebar-mini">S</span>
+                                        <span class="sidebar-normal">Settings</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item"></li>
+                            </ul>
+                        </div>
                     </div>
                     <ul class="nav">
                     <li class="nav-item active">
@@ -62,24 +62,25 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="material-icons">timeline</i>
                             <p>Progress</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="material-icons">grid_on</i>
                             <p>Tables<b class="caret" id='caret-tables'></b></p>
                         </a>
                     </li>
                     <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="material-icons">content_paste</i>
                             <p>Data<b class="caret" id='caret-data'></b></p>
                         </a>
                     </li>
                     </ul>
+                    </div>
                 </div>
             </div>
         </div>
