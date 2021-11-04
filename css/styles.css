@@ -116,9 +116,6 @@ navbar{
     display: flex;
     flex-flow: column nowrap;
 }
-.sidebar-nav.stretch{
-
-  }
 
 .navbar-toggler{
     padding:0.25rem 0.75rem;
@@ -179,8 +176,6 @@ navbar{
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
-    display: flex;
-    flex-flow: row nowrap;
     height: 100vh;
     width: 100%;
     margin: 0;
@@ -224,10 +219,10 @@ navbar{
     padding-left: 0.25em;
 }
 .input-ctr{
-    display:flex;
+    display: flex;
+    flex-flow:column nowrap;
 }
 .login-input{
-    display:inline-block;
     position: relative !important;
     bottom: -1em;
     margin:auto;
@@ -236,11 +231,23 @@ navbar{
     margin-top: 0.25em;
     border-bottom: 1px Solid rgb(146, 146, 146);
     color: rgb(146, 146, 146);
-    transition: border-bottom 200ms linear;
+    
 }
-.login-input:focus{
-    border-bottom: solid 3px rgb(233, 88, 21, 1);
+.underline{
+    position: relative;
+    z-index: 1;
+    border-bottom: 2px solid rgb(233, 88, 21, 1);
+    width: 0% !important;
+    left:0.25em;
+    top:0.9em;
+    transition-property: width;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
 }
+.input-ctr > input[type=text]:hover + .underline, .input-ctr > input[type=text]:focus + .underline{
+    width: 97% !important;
+}
+
 .login-input::placeholder{
     color:rgb(146, 146, 146);
 }
@@ -257,21 +264,23 @@ input{
     position: relative;
     bottom: -4em;
     align-self: center;
+    background-color: transparent;
     width: 12em;
     color: rgb(233, 88, 21, 1);
     font-weight: 400;
+    transition-property:background-color,box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    transition: transform 150ms ease-in-out;
 }
 #login-submit:hover{
     background-color:rgba(255, 122, 60, 0.123);
     box-shadow: 0 4px 20px 0px rgb(0,0,0,0.14),
               0 7px 10px -5px rgba(250, 113, 50, 0.123);
-    transform: scale(1);
 }
 #login-submit:active{
-    background-color: rgb(233, 88, 21, 0.8);
-    color: white;
-    transition: 150ms;
-    transition-property: background-color;
+    background-color:rgba(255, 122, 60, 0.523);
+    transform: scale(0.95);
 }
 .options-login{
     display: flex;
@@ -290,6 +299,7 @@ input{
     font-size: 0.8rem;
     bottom: -5em;
     right: -1.8em;
+    cursor: pointer;
 }
 #forget-password{
     font-family: 'fira sans';
@@ -351,11 +361,20 @@ input{
     border-radius: 10px;
     color: white;
     font-size: 18px;
+    cursor: pointer;
+    transition-property:background-color,box-shadow, transform;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
 }
 .sm-img:hover{
     background-color:rgb(146, 146, 146, 0.25);
     box-shadow: 0 4px 20px 0px rgb(0,0,0,0.14),
-              0 7px 10px -5px rgba(0,0,0,0.225);
+              0 7px 10px -5px rgba(0,0,0,0.225);          
+}
+.sm-img:active{
+    background-color:transparent;
+    box-shadow:none;
+    transform: scale(0.9);
 }
 .or{
     color:rgb(146, 146, 146);

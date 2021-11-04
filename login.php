@@ -18,35 +18,34 @@
     //include('account_validation.php'); ?>
 
     <div class="ctr">
-        <div class="sidebar-nav">
-            <div class="collapse navbar-collapse justify-content-end" id="signInNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="create_account.php">Create Account</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" id="login-search-btn" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <img class="nav-logo" src="img/nav-brand.png">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#signInNav" aria-controls="signInNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
-
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="create_account.php">Create Account</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" id="login-search-btn" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </nav>
         <div class="content">
+            <!-- 
+            -->
             <h1 id="welcome" class="login-welcome">Welcome To Magnify LifeStyle Tracking</h1>
             <div class="form-ctr">
                 <form class="login-form" action="" Method="POST">
@@ -63,10 +62,12 @@
                     <div id="username-ctr" class="input-ctr">
                         <!--<label class="login-label">Username:</label>-->
                         <input id = "username" type="text" class="login-input" placeholder="Username..."></input>
+                        <span class="underline"></span>
                     </div>
                     <div id="password-ctr" class="input-ctr">
                         <!--<label class="login-label">Password:</label>-->
                         <input id="pass" type="text" class="login-input" placeholder="Password..."></input>
+                        <span class="underline"></span>
                     </div>
                     <button type="submit" id="login-submit" class=" btn  submit-button">LET'S GO</button>
                     <div class="options-login">
