@@ -1,5 +1,9 @@
 
-var navBtn = document.getElementById('#navbar-toggler');
+var navBtn = document.getElementById('navbar-toggler');
+
 navBtn.addEventListener('click', function() {
-    $('#form-ctr').css({"z-index":"-1"});
-}, false);
+        $('.form-ctr').toggleClass("dimmed");
+        $('.ctr').toggleClass("darken");
+        $('.navbar-collapse').toggleClass("bg");
+});
+    console.log();
