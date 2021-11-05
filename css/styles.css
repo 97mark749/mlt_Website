@@ -64,6 +64,9 @@ input, select {
 
 
 /* ========================================= */
+input,textarea,button{
+    outline:none!important;
+}
 body{
     background-image: url('../img/login-bg.jpeg');
     background-position: center;
@@ -118,12 +121,28 @@ navbar{
 }
 
 .navbar-toggler{
-    padding:0.25rem 0.75rem;
+    padding:0 0.25rem;
     font-size: 1.25rem !important;
-    line-height: 1;
+    line-height: 0;
     background-color: transparent !important;
-    border: 1px solid transparent;
+    border: 1px solid rgb(221, 237, 253, 1);
     border-radius: 0.25rem;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+}
+.nav-toggler-icon{
+    color: rgb(221, 237, 253, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+}
+
+.nav-toggler-icon:hover, .nav-toggler-icon:focus{
+    color: rgb(233, 88, 21, 1) !important;
+}
+.navbar-toggler:hover, .navbar-toggler:focus{
+    border: 1px solid rgb(233, 88, 21, 1) !important;
 }
 .form-control{
     background-color:rgb(221, 237, 253, 0.5) !important;
@@ -558,4 +577,16 @@ input{
   }
   ::-ms-scrollbar{
     display: none;
+  }
+ 
+  @media screen and (max-width: 984px){
+    .navbar-collapse{
+        position:absolute;
+        width: 15em;
+        text-align: center;
+        top: 5em;
+        z-index: 999;
+        left:auto;
+        right:5%;
+    }
   }
