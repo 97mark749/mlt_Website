@@ -101,21 +101,22 @@ navbar{
 .navbar-collapse{
     background-color: transparent;
     box-shadow: none;
-    transition-property: background-color, box-shadow;
+    transition-property: background-color, box-shadow, border;
     transition-duration: 250ms;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.41,0.13,0.24,1.04);
 }
 .navbar-collapse.bg{
     background-color:rgba(0,0,0, 0.75);
     box-shadow: 0 2px 20px 0px rgb(0,0,0,0.14),
               0 0 20px -8px rgba(250, 113, 50, 0.623);
+    border: 0.5px solid rgb(233, 88, 21, 1) !important;
 }
 .navbar-nav li a{
     font-family: 'fira sans';
     margin-right: 1em;
     text-shadow: black 0px 0px 8px,
     0 1px 4px rgba(250, 113, 50, 0.623);
-    color: rgb(221, 237, 253, 0.8) !important;
+    color: rgb(221, 237, 253, 1) !important;
 }
 .navbar-nav li:first-child a:hover, .navbar-nav li:nth-child(2) a:hover, .navbar-nav li:last-child a:hover{
     font-weight: 600;
@@ -131,7 +132,14 @@ navbar{
     display: flex;
     flex-flow: column nowrap;
 }
-
+.nav-logo{
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+}
+.nav-logo:active{
+    transform: scale(0.95);
+}
 .navbar-toggler{
     padding:0 0.25rem;
     font-size: 1.25rem !important;
@@ -139,7 +147,7 @@ navbar{
     background-color: transparent !important;
     border: 1px solid rgb(221, 237, 253, 1);
     border-radius: 0.25rem;
-    transition-property: border;
+    transition-property: border, transform;
     transition-duration: 250ms;
     transition-timing-function: ease-in-out;
 }
@@ -155,6 +163,9 @@ navbar{
 }
 .navbar-toggler:hover, .navbar-toggler:focus{
     border: 1px solid rgb(233, 88, 21, 1) !important;
+}
+.navbar-toggler:active{
+    transform: scale(0.95);
 }
 .form-control{
     background-color:rgb(221, 237, 253, 0.5) !important;
@@ -176,20 +187,25 @@ navbar{
     box-shadow: 1px 1px 5px 1px rgb(37, 36, 36, 0.8);
     color:rgb(221, 237, 253, 0.5);
     height: 2.25em;
+    transition-property: transform, color,box-shadow;
+    transition-duration: 210ms;
+    transition-timing-function: ease-in-out;
 }
 #login-search-btn span{
     position:relative;
     top: 0;
 }
 #login-search-btn:hover{
-    color:rgb(233, 88, 21, 1);
-    border: 1.5px solid rgb(233, 88, 21, 1) !important;
+    border: 2px solid rgb(233, 88, 21, 1) !important;
+}
+#login-search-btn span:hover{
+    color: rgb(233, 88, 21, 1);
 }
 #login-search-btn:active{
     box-shadow: 0 4px 20px 0px rgb(0,0,0,0.14),
               0 7px 10px -5px rgba(250, 113, 50, 0.623);
-    background:rgb(233, 88, 21, 1);
     color: white;
+    transform: scale(0.95);
 }
 .login-welcome{
     display: none;
@@ -319,19 +335,20 @@ input{
     width: 12em;
     color: rgb(233, 88, 21, 1);
     font-weight: 400;
-    transition-property:background-color,box-shadow;
+    transition-property:background-color,box-shadow, transform, color;
     transition-duration: 250ms;
     transition-timing-function: ease-in-out;
-    transition: transform 150ms ease-in-out;
 }
 #login-submit:hover{
-    background-color:rgba(255, 122, 60, 0.123);
+    background-color:rgb(233,88,21,0.65);
+    color:rgb(221, 237, 253, 1);
     box-shadow: 0 4px 20px 0px rgb(0,0,0,0.14),
-              0 7px 10px -5px rgba(250, 113, 50, 0.123);
+              0 7px 10px -5px rgba(0,0,0,0.225);
 }
 #login-submit:active{
-    background-color:rgba(255, 122, 60, 0.523);
-    transform: scale(0.95);
+    background: transparent;
+    box-shadow: none;
+    transform: scale(0.90);
 }
 .options-login{
     display: flex;
@@ -351,6 +368,9 @@ input{
     bottom: -5em;
     right: -1.8em;
     cursor: pointer;
+    transition-property: color, text-decoration, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in;
 }
 #forget-password{
     font-family: 'fira sans';
@@ -363,9 +383,16 @@ input{
     text-decoration: none;
     font-weight: 700;
     color: rgb(233, 88, 21, 1);
+    transition-property: color, text-decoration, transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in;
 }
 #forget-password-link:hover, #help:hover{
     text-decoration: underline;
+    color:rgb(126, 126, 126);
+}
+#forget-password-link:active, #help:active{
+    transform: scale(0.9);
 }
 .alt-login-ctr{
     background-color:rgb(233, 88, 21, 1);
@@ -376,8 +403,8 @@ input{
     align-self: center;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 20px 0px rgb(0,0,0,0.14),
-              0 7px 10px -5px rgba(250, 113, 50, 0.623);
+    box-shadow: 0 5px 20px 0px rgb(0,0,0,0.14),
+                0 7px 10px -5px rgba(250, 113, 50, 0.623);
 }
 .login-header{
     position: relative;
@@ -387,6 +414,8 @@ input{
     font-size: 20px;
     font-weight: 600;
     color: white;
+    text-shadow: 1px 1px 3px rgba(59, 62, 95, 0.8), 
+    -1px 1px 3px rgba(59, 62, 95, 1);
 }
 .socialMedia-login-ctr{
     position: relative;
@@ -405,6 +434,8 @@ input{
     height: 1.5em;
     position: relative;
     top: 0.5em;
+    text-shadow: 1.3px 2px 2px rgba(59, 62, 95, 0.8), 
+    1.5px 2px 8px rgba(250, 113, 50, 0.623);
 }
 .sm-img{
     width: 2em;
@@ -428,7 +459,7 @@ input{
     transform: scale(0.9);
 }
 .or{
-    color:rgb(146, 146, 146);
+    color:rgb(146, 146, 146, 1);
     text-align: center;
     font-size: 13px;
     position: relative;
@@ -626,8 +657,15 @@ input{
     .form-control, #login-search-btn{
         height: 2em;
     }
+    #login-search-btn{
+        border-color:rgb(221, 237, 253, 1) !important;
+        border-radius: 50%;
+        width: 2em;
+    }
     #login-search-btn span{
         top:-0.1em;
+        color:rgb(221, 237, 253, 1);
+        font-size: 18px;
     }
     .navbar-nav{
         margin-bottom: 3em !important;

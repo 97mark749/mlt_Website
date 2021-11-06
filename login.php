@@ -26,7 +26,7 @@
             <div class="container-fluid">
                 <img class="nav-logo" src="img/nav-brand.png">
                 <button class="navbar-toggler" id = 'navbar-toggler' type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="material-icons nav-toggler-icon" id="nav-toggler-icon">menu</span>
+                    <span class="material-icons nav-toggler-icon" id="nav-toggler-icon">menu</span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
