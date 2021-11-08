@@ -17,9 +17,8 @@
 <body>
 
     <?php 
-    require('config.php');
-
-    //include('account_validation.php'); ?>
+    require('config.php'); 
+    ?>
 
     <div class="ctr">
         <nav class="navbar sticky-top navbar-expand-lg">
@@ -70,7 +69,7 @@
                     </div>
                     <div id="password-ctr" class="input-ctr">
                         <!--<label class="login-label">Password:</label>-->
-                        <input id="pass" type="text" class="login-input" placeholder="Password..."></input>
+                        <input id="pass" type="password" class="login-input" placeholder="Password..."></input>
                         <span class="underline"></span>
                     </div>
                     <button type="submit" id="login-submit" class=" btn  submit-button">LET'S GO</button>
@@ -87,7 +86,7 @@
 
 
     <?php
-        require_once('config.php');
+        include('account_validation.php');
     ?>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

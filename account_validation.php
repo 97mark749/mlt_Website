@@ -2,12 +2,12 @@
     require_once('config.php');
 
     //checks to see if username and password has been entered once submitted
-    if(!ISSET($_POST['username'],$_POST['password'])){ // if does not exist, create
+    if(!ISSET($_POST['username'],$_POST['pass'])){ // if does not exist, create
         exit('Please Enter Your Username & Password!');
     }
     else{
         //Prepare SQL, do so to prevent SQL injection.
-        if($statement = $connection->prepare('SELECT id,password FROM users WHERE username = ?')){
+        if($statement = $connection->prepare('SELECT id,Password FROM users WHERE Username = ?')){
             // BInd Paramenters
             $statement->bind_param('s',$_POST['username']);
             $statement->execute();

@@ -298,23 +298,22 @@ navbar{
     margin-top: 0.25em;
     border-bottom: 1px Solid rgb(146, 146, 146);
     color: rgb(146, 146, 146);
-    
 }
 .underline{
     position: relative;
-    z-index: 1;
+    z-index: 999;
     border-bottom: 2px solid rgb(233, 88, 21, 1);
     width: 0% !important;
     left:0.25em;
     top:0.9em;
     transition-property: width;
     transition-duration: 200ms;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
 }
-.input-ctr > input[type=text]:hover + .underline, .input-ctr > input[type=text]:focus + .underline{
+.input-ctr > input[type=text]:hover + .underline, .input-ctr > input[type=text]:focus + .underline,
+.input-ctr > input[type=password]:hover + .underline, .input-ctr > input[type=password]:focus + .underline{
     width: 97% !important;
 }
-
 .login-input::placeholder{
     color:rgb(146, 146, 146);
 }
